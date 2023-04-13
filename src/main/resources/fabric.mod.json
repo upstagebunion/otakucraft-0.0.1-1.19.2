@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "otakucraft",
+	"version": "${version}",
+	"name": "Otakucraft",
+	"description": "Este mod pondrá a prueba tu virginidad!",
+	"authors": [
+		"Upstagebunion"
+	],
+	"contact": {
+		"homepage": "https://instagram.com/upstagebunion",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/otakucraft/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.upstagebunion.otakucraft.Otakucraft"
+		],
+		"client": [
+			"net.upstagebunion.otakucraft.OtakucraftClient"
+		],
+		"fabric-datagen": [
+          "net.upstagebunion.otakucraft.OtakucraftDataGenerator"
+		]
+	},
+	"mixins": [
+		"otakucraft.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.14.19",
+		"minecraft": "~1.19.2",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
