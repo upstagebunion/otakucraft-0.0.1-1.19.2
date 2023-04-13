@@ -2,6 +2,7 @@ package net.upstagebunion.otakucraft;
 
 import net.fabricmc.api.ModInitializer;
 
+import net.upstagebunion.otakucraft.block.ModBlocks;
 import net.upstagebunion.otakucraft.item.ModItems;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -13,5 +14,6 @@ public class Otakucraft implements ModInitializer {
 	@Override
 	public void onInitialize() {
 		ModItems.registerModItems();
+		ModBlocks.registerModBlocks();
 	}
 }
