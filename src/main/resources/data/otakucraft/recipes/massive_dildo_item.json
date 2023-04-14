@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " ##",
+    " X#",
+    "Y  "
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:slime_ball"
+    },
+    "X": {
+      "item": "minecraft:iron_sword"
+    },
+    "Y": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "otakucraft:massive_dildo_item"
+  }
+}
