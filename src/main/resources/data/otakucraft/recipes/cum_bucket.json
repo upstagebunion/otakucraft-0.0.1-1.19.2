@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "#X#",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "otakucraft:cum"
+    },
+    "X": {
+      "item": "minecraft:bucket"
+    }
+  },
+  "result": {
+    "item": "otakucraft:cum_bucket"
+  }
+}
