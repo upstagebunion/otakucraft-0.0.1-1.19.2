@@ -1,4 +1,4 @@
-package net.upstagebunion.otakucraft.block;
+package net.upstagebunion.otakucraft.block.custom;
 
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.FallingBlock;
