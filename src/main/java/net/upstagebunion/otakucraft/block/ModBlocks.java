@@ -14,6 +14,7 @@ import net.minecraft.util.registry.Registry;
 import net.upstagebunion.otakucraft.Otakucraft;
 import net.upstagebunion.otakucraft.block.custom.AvocadoCropBlock;
 import net.upstagebunion.otakucraft.block.custom.DarkSandBlock2;
+import net.upstagebunion.otakucraft.block.custom.SodaMachineBlock;
 import net.upstagebunion.otakucraft.item.ModItemGroup;
 
 public class ModBlocks {
@@ -22,6 +23,8 @@ public class ModBlocks {
     public static final Block DARKSAND = registerBlock("darksand_block", new DarkSandBlock2(0, FabricBlockSettings.of(Material.AGGREGATE).strength(0.5f).sounds(BlockSoundGroup.SAND)), ModItemGroup.OTAKUCRAFT_GRP);
 
     public static final Block AVOCADO_CROP_BLOCK = registerBlockWithoutItem("avocado_crop_block", new AvocadoCropBlock(FabricBlockSettings.copy(Blocks.WHEAT)));
+
+    public static final Block SODA_MACHINE_BLOCK = registerBlock("soda_machine_block", new SodaMachineBlock(FabricBlockSettings.of(Material.METAL).strength(4f).nonOpaque()), ModItemGroup.OTAKUCRAFT_GRP);
 
     private static Block registerBlock (String name, Block block, ItemGroup tab){
         registerBlockItem(name, block, tab);

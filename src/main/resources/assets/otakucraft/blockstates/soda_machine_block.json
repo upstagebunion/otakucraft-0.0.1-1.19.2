@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "otakucraft:block/soda_machine_block"
+    },
+    "facing=south": {
+      "model": "otakucraft:block/soda_machine_block",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "otakucraft:block/soda_machine_block",
+      "y": 270
+    },
+    "facing=east": {
+      "model": "otakucraft:block/soda_machine_block",
+      "y": 90
+    }
+  }
+}
