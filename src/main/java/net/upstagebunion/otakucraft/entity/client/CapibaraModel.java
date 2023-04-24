@@ -10,7 +10,7 @@ public class CapibaraModel extends AnimatedGeoModel<CapibaraEntity> {
 
     @Override
     public Identifier getModelResource(CapibaraEntity object) {
-        return new Identifier(Otakucraft.MOD_ID, "geo/capibara.geo.json");
+        return new Identifier(Otakucraft.MOD_ID, "geo/capibara2.geo.json");
     }
 
     @Override

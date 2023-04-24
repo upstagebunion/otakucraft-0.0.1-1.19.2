@@ -8,6 +8,8 @@ import net.upstagebunion.otakucraft.Otakucraft;
 
 public class ModSounds {
     public static final SoundEvent WOMANMOANEVENT = registerSoundEvent("woman_moan");
+    public static final SoundEvent CAPIBARA_HURT = registerSoundEvent("capibara_hurt");
+    public static final SoundEvent CAPIBARA_AMBIENT = registerSoundEvent("capibara_ambient");
     private static SoundEvent registerSoundEvent(String name){
         Identifier id =  new Identifier(Otakucraft.MOD_ID, name);
         return Registry.register(Registry.SOUND_EVENT, id, new SoundEvent(id));

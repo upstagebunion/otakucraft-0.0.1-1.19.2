@@ -5,14 +5,15 @@ import net.minecraft.entity.EntityType;
 import net.minecraft.entity.ai.goal.*;
 import net.minecraft.entity.attribute.DefaultAttributeContainer;
 import net.minecraft.entity.attribute.EntityAttributes;
+import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.entity.passive.AnimalEntity;
 import net.minecraft.entity.passive.PassiveEntity;
-import net.minecraft.entity.passive.TameableEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
+import net.upstagebunion.otakucraft.sound.ModSounds;
 import org.jetbrains.annotations.Nullable;
 import software.bernie.geckolib3.core.IAnimatable;
 import software.bernie.geckolib3.core.PlayState;
@@ -74,5 +75,15 @@ public class CapibaraEntity extends AnimalEntity implements IAnimatable {
     @Override
     protected void playStepSound(BlockPos pos, BlockState state) {
         this.playSound(SoundEvents.ENTITY_PIG_STEP, 0.15f, 1.0f);
+    }
+
+    @Override
+    protected void playHurtSound(DamageSource source) {
+        this.playSound(ModSounds.CAPIBARA_HURT, 0.3f, 1.0f);
+    }
+
+    @Override
+    public void playAmbientSound() {
+        this.playSound(ModSounds.CAPIBARA_AMBIENT, 0.4f, 1.0f);
     }
 }

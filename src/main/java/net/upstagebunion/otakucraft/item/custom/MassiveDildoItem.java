@@ -35,7 +35,7 @@ public class MassiveDildoItem extends Item {
                     ModSounds.WOMANMOANEVENT, // The sound that will play
                     SoundCategory.PLAYERS, // This determines which of the volume sliders affect this sound
                     0.5f, //Volume multiplier, 1 is normal, 0.5 is half volume, etc
-                    1.5f // Pitch multiplier, 1 is normal, 0.5 is half pitch, etc
+                    1f // Pitch multiplier, 1 is normal, 0.5 is half pitch, etc
             );
             user.setHealth(10);
             user.addStatusEffect(new StatusEffectInstance(StatusEffects.SLOWNESS, 200));

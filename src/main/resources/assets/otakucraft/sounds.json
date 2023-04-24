@@ -4,5 +4,17 @@
     "sounds": [
       "otakucraft:woman_moan"
     ]
+  },
+  "capibara_hurt": {
+    "subtitle": "otakucraft.capibara_hurt",
+    "sounds": [
+      "otakucraft:capibara_hurt"
+    ]
+  },
+  "capibara_ambient": {
+    "subtitle": "otakucraft.capibara_ambient",
+    "sounds": [
+      "otakucraft:capibara_ambient"
+    ]
   }
 }
