@@ -14,7 +14,7 @@ import software.bernie.geckolib3.renderers.geo.GeoEntityRenderer;
 public class CapibaraRenderer extends GeoEntityRenderer<CapibaraEntity> {
     public CapibaraRenderer(EntityRendererFactory.Context renderManager) {
         super(renderManager, new CapibaraModel());
-        this.shadowRadius = 0.4f;
+        this.shadowRadius = 1.0f;
     }
 
     @Override

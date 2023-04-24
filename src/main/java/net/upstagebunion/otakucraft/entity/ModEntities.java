@@ -13,5 +13,5 @@ import net.upstagebunion.otakucraft.entity.custom.CapibaraEntity;
 public class ModEntities {
     public static final EntityType<CapibaraEntity> CAPIBARA = Registry.register(
             Registry.ENTITY_TYPE, new Identifier(Otakucraft.MOD_ID, "capibara"),
-            FabricEntityTypeBuilder.create(SpawnGroup.CREATURE, CapibaraEntity::new).dimensions(EntityDimensions.fixed(0.4f, 1.5f)).build());
+            FabricEntityTypeBuilder.create(SpawnGroup.CREATURE, CapibaraEntity::new).dimensions(EntityDimensions.fixed(1f, 1.75f)).build());
 }
