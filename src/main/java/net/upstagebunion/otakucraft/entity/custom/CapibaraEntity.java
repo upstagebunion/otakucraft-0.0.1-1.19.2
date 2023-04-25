@@ -1,6 +1,7 @@
 package net.upstagebunion.otakucraft.entity.custom;
 
 import net.minecraft.block.BlockState;
+import net.minecraft.client.sound.PassiveBeeSoundInstance;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.ai.goal.*;
 import net.minecraft.entity.attribute.DefaultAttributeContainer;
@@ -18,11 +19,13 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NbtCompound;
 import net.minecraft.scoreboard.AbstractTeam;
 import net.minecraft.server.world.ServerWorld;
+import net.minecraft.sound.SoundEvent;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
+import net.upstagebunion.otakucraft.entity.ModEntities;
 import net.upstagebunion.otakucraft.item.ModItems;
 import net.upstagebunion.otakucraft.sound.ModSounds;
 import org.jetbrains.annotations.Nullable;
@@ -57,12 +60,18 @@ public class CapibaraEntity extends TameableEntity implements IAnimatable {
         this.goalSelector.add(3, new WanderAroundFarGoal(this, 0.75f, 1));
         this.goalSelector.add(4, new LookAroundGoal(this));
         this.goalSelector.add(5, new LookAtEntityGoal(this, PlayerEntity.class, 8.0f));
+        this.targetSelector.add(6, new AnimalMateGoal(this, 1.0f));
     }
 
     @Nullable
     @Override
     public PassiveEntity createChild(ServerWorld world, PassiveEntity entity) {
-        return null;
+        return ModEntities.CAPIBARA.create(world);
+    }
+
+    @Override
+    public boolean isBreedingItem(ItemStack stack) {
+        return stack.getItem() == ModItems.CUM;
     }
 
     private <E extends IAnimatable> PlayState predicate(AnimationEvent<E> event){
@@ -104,6 +113,12 @@ public class CapibaraEntity extends TameableEntity implements IAnimatable {
         this.playSound(ModSounds.CAPIBARA_AMBIENT, 0.4f, 1.0f);
     }
 
+    @Nullable
+    @Override
+    protected SoundEvent getDeathSound() {
+        return ModSounds.CAPIBARA_DEATH;
+    }
+
     /*TAMEABLE ENTITY*/
     private static final TrackedData<Boolean> SITTING = DataTracker.registerData(CapibaraEntity.class, TrackedDataHandlerRegistry.BOOLEAN);
 
@@ -112,6 +127,10 @@ public class CapibaraEntity extends TameableEntity implements IAnimatable {
         Item item = itemstack.getItem();
 
         Item itemForTaming = ModItems.AVOCADO;
+
+        if(isBreedingItem(itemstack)){
+            return super.interactMob(player, hand);
+        }
 
         if(item == itemForTaming && !isTamed()){
             if(this.world.isClient()){

@@ -8,13 +8,19 @@
   "capibara_hurt": {
     "subtitle": "otakucraft.capibara_hurt",
     "sounds": [
-      "otakucraft:capibara_hurt"
+      "otakucraft:capibara/capibara_hurt"
     ]
   },
   "capibara_ambient": {
     "subtitle": "otakucraft.capibara_ambient",
     "sounds": [
-      "otakucraft:capibara_ambient"
+      "otakucraft:capibara/capibara_ambient"
+    ]
+  },
+  "capibara_death": {
+    "subtitle": "otakucraft.capibara_death",
+    "sounds": [
+      "otakucraft:capibara/capibara_death"
     ]
   }
 }

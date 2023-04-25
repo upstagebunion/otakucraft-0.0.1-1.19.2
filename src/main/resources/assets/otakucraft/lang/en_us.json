@@ -10,6 +10,7 @@
   "item.otakucraft.massive_dildo_item": "Massive Dildo",
   "otakucraft.woman_moan": "Woman Moan Sound",
   "item.otakucraft.capibara_spawn_egg": "Capibara Spawn Egg",
-  "otakucraft.capibara_hurt": "Suena Capibara Herido",
-  "otakucraft.capibara_ambient": "Suena ruido de capibara"
+  "otakucraft.capibara_hurt": "Hurt Capibara Noise",
+  "otakucraft.capibara_ambient": "Capibara Noises",
+  "otakucraft.capibara_death": "Capibara Death Noise"
 }

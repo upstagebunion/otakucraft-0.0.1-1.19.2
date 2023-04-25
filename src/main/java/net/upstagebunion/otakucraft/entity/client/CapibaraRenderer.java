@@ -25,6 +25,12 @@ public class CapibaraRenderer extends GeoEntityRenderer<CapibaraEntity> {
     @Override
     public RenderLayer getRenderType(CapibaraEntity animatable, float partialTick, MatrixStack poseStack, @Nullable VertexConsumerProvider bufferSource, @Nullable VertexConsumer buffer, int packedLight, Identifier texture) {
 
+        if(animatable.isBaby()){
+            poseStack.scale(0.5f, 0.5f, 0.5f);
+        }else{
+            poseStack.scale(1f, 1f, 1f);
+        }
+
         return super.getRenderType(animatable, partialTick, poseStack, bufferSource, buffer, packedLight, texture);
     }
 }

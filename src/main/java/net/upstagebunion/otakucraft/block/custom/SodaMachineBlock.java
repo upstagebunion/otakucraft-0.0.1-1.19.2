@@ -30,10 +30,11 @@ public class SodaMachineBlock extends HorizontalFacingBlock {
         return SHAPE;
     }
 
-    @Override
+    /*@Override
     public VoxelShape getCollisionShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
         return SHAPE;
-    }
+    }*/
+
 
     @Nullable
     @Override
