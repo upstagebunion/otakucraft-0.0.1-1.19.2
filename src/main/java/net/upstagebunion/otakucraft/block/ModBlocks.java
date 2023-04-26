@@ -24,7 +24,7 @@ public class ModBlocks {
 
     public static final Block AVOCADO_CROP_BLOCK = registerBlockWithoutItem("avocado_crop_block", new AvocadoCropBlock(FabricBlockSettings.copy(Blocks.WHEAT)));
 
-    public static final Block SODA_MACHINE_BLOCK = registerBlock("soda_machine_block", new SodaMachineBlock(FabricBlockSettings.of(Material.METAL).strength(4f).nonOpaque()), ModItemGroup.OTAKUCRAFT_GRP);
+    public static final Block SODA_MACHINE_BLOCK = registerBlock("soda_machine_block", new SodaMachineBlock(FabricBlockSettings.of(Material.METAL).strength(4f).nonOpaque().collidable(true).dynamicBounds()), ModItemGroup.OTAKUCRAFT_GRP);
 
     private static Block registerBlock (String name, Block block, ItemGroup tab){
         registerBlockItem(name, block, tab);

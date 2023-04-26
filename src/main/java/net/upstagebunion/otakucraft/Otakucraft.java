@@ -7,6 +7,7 @@ import net.upstagebunion.otakucraft.block.ModBlocks;
 import net.upstagebunion.otakucraft.entity.ModEntities;
 import net.upstagebunion.otakucraft.entity.custom.CapibaraEntity;
 import net.upstagebunion.otakucraft.item.ModItems;
+import net.upstagebunion.otakucraft.painting.ModPaintings;
 import net.upstagebunion.otakucraft.sound.ModSounds;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -22,6 +23,7 @@ public class Otakucraft implements ModInitializer {
 		ModItems.registerModItems();
 		ModBlocks.registerModBlocks();
 		ModSounds.registerModSounds();
+		ModPaintings.registerPaintings();
 
 		GeckoLib.initialize();
 		FabricDefaultAttributeRegistry.register(ModEntities.CAPIBARA, CapibaraEntity.setAttributes());
